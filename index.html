@@ -1,0 +1,2469 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+			<title>Test design &#8211; the best design</title>
+		<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":".\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.3"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./wp-includes/css/dist/block-library/style.min.css?ver=5.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-5-css" href="./wp-content/plugins/themeisle-companion/obfx_modules/gutenberg-blocks/assets/fontawesome/css/all.min.css?ver=2.9.17" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-4-shims-css" href="./wp-content/plugins/themeisle-companion/obfx_modules/gutenberg-blocks/assets/fontawesome/css/v4-shims.min.css?ver=2.9.17" type="text/css" media="all">
+<link rel="stylesheet" id="themeisle-block_styles-css" href="./wp-content/plugins/themeisle-companion/vendor/codeinwp/gutenberg-blocks/build/style.css?ver=1.5.6" type="text/css" media="all">
+<link rel="stylesheet" id="table-addons-for-elementor-css" href="./wp-content/plugins/table-addons-for-elementor/public/css/table-addons-for-elementor-public.css?ver=1.0.1" type="text/css" media="all">
+<link rel="stylesheet" id="elementskit-font-css-admin-css" href="./wp-content/plugins/elementskit-lite/modules/controls/assets/css/ekiticons.css?ver=5.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-css" href="./wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.9.1" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-animations-css" href="./wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.0.7" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-legacy-css" href="./wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.0.7" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-frontend-css" href="./wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.0.7" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-4-css" href="./wp-content/uploads/elementor/css/post-4.css?ver=1614438239" type="text/css" media="all">
+<link rel="stylesheet" id="elementskit-css-widgetarea-control-editor-css" href="./wp-content/plugins/elementskit-lite/modules/controls/assets/css/widgetarea-editor.css?ver=2.0.4" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-global-css" href="./wp-content/uploads/elementor/css/global.css?ver=1614439065" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-post-7-css" href="./wp-content/uploads/elementor/css/post-7.css?ver=1614796529" type="text/css" media="all">
+<link rel="stylesheet" id="elementskit-core-css" href="./wp-content/plugins/elementskit-lite/widgets/init/assets/css/ekit-core.css?ver=2.0.4" type="text/css" media="all">
+<link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CNunito+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPlayfair+Display%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;ver=5.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-ekiticons-css" href="./wp-content/plugins/elementskit-lite/modules/controls/assets/css/ekiticons.css?ver=5.9.0" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0" type="text/css" media="all">
+<link rel="stylesheet" id="elementor-icons-fa-regular-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.12.0" type="text/css" media="all">
+<script type="text/javascript" src="./wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" id="jquery-core-js"></script>
+<link rel="https://api.w.org/" href="./wp-json/index.html">
+<link rel="alternate" type="application/json" href="./wp-json/wp/v2/pages/7/index.html">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="./xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.5.3">
+<link rel="canonical" href="./index.html">
+<link rel="shortlink" href="./index.html">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="alternate" type="application/json+oembed" href="./wp-json/oembed/1.0/embed/index.html?url=.%2F">
+<link rel="alternate" type="text/xml+oembed" href="./wp-json/oembed/1.0/embed/index.html?url=.%2F&#038;format=xml">
+<!-- Enter your scripts here -->		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload, .lazyloading { opacity: 0; }
+				.lazyloaded {
+					opacity: 1;
+					transition: opacity 400ms;
+					transition-delay: 0ms;
+				}</style>
+				<style type="text/css" id="wp-custom-css">
+					#nf-field-4 {
+						background-color: #8AB61E;
+						color: #fff;
+						padding: 10px 36% 10px 36%; 
+								}
+					#nf-field-4:hover{
+						background-color: #8AB61E;
+				</style>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+<body class="home page-template page-template-elementor_canvas page page-id-7 elementor-default elementor-template-canvas elementor-kit-4 elementor-page elementor-page-7">
+			<div data-elementor-type="wp-page" data-elementor-id="7" class="elementor elementor-7" data-elementor-settings="[]">
+						<div class="elementor-inner">
+							<div class="elementor-section-wrap">
+							<section class="elementor-section elementor-top-section elementor-element elementor-element-3f3c6de elementor-section-full_width elementor-section-stretched elementor-reverse-mobile elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default" data-id="3f3c6de" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ca4d4e9" data-id="ca4d4e9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4328456 elementor-widget elementor-widget-spacer" data-id="4328456" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-affb1e4" data-id="affb1e4" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+					<div class="elementor-background-overlay"></div>
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-078a1bd elementor-hidden-phone elementor-widget elementor-widget-spacer" data-id="078a1bd" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4e461dc" data-id="4e461dc" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-64db205 elementor-widget elementor-widget-text-editor" data-id="64db205" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Nepal Gov. Reg. No: 116524/070/071&nbsp;| Tourism Reg. No: 1644/070&nbsp;|  TAAN Reg No. 0668  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phone: +977 1 4420444   Cell: +977 9851052042</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-992b23c elementor-section-full_width elementor-section-stretched elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default" data-id="992b23c" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-4dea2b9" data-id="4dea2b9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c32bda2 elementor-widget elementor-widget-spacer" data-id="c32bda2" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-d2bc76b" data-id="d2bc76b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6a4e48f elementor-widget elementor-widget-image" data-id="6a4e48f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="159" height="69" alt="" loading="lazy" data-src="./wp-content/uploads/2021/03/Logo.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="159" height="69" alt="" loading="lazy" data-src="./wp-content/uploads/2021/03/Logo.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="159" height="69" src="./wp-content/uploads/2021/03/Logo.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-da6d0cc" data-id="da6d0cc" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-feaf7a9 elementor-widget elementor-widget-ekit-nav-menu" data-id="feaf7a9" data-element_type="widget" data-widget_type="ekit-nav-menu.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024"><div id="ekit-megamenu-main-menu" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default elementskit_line_arrow ekit-nav-menu-one-page-no">
+<ul id="main-menu" class="elementskit-navbar-nav elementskit-menu-po-left">
+<li id="menu-item-121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Destination<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">Dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-122" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-122 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Trekking<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-126" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-127 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Climbing<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-140" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-128" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Tour<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-139" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-129 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Adventure<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-138" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-130 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Rafting<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-137" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-137 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-131" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-131 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Company<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-132" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-132 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Contact Us<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">Droppdown</a></li>
+</ul>
+</li>
+<li id="menu-item-133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-133 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Offer<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li id="menu-item-134" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Blog<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+</ul>
+				<div class="elementskit-nav-identity-panel">
+					<div class="elementskit-site-title">
+						<a class="elementskit-nav-logo" href="./index.html" target="_self" rel="">
+							<img alt="" data-src="./wp-content/plugins/elementor/assets/images/placeholder.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img alt="" data-src="./wp-content/plugins/elementor/assets/images/placeholder.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="./wp-content/plugins/elementor/assets/images/placeholder.png" alt=""></noscript>
+</noscript>
+						</a>
+					</div>
+					<button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>
+				</div>
+			</div></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-418d693 elementor-section-full_width elementor-section-stretched elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default" data-id="418d693" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6aa9d2a" data-id="6aa9d2a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-edfd338 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="edfd338" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e9d0494" data-id="e9d0494" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-80ecf4c elementor-widget elementor-widget-heading" data-id="80ecf4c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Your Adventure Travel Expert in Nepal</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4c5b238 elementor-align-left elementor-widget elementor-widget-button" data-id="4c5b238" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Get Started</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e1f1d71" data-id="e1f1d71" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-34932dc elementor-section-full_width elementor-section-stretched elementor-hidden-desktop elementor-section-height-default elementor-section-height-default" data-id="34932dc" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-df2bf50" data-id="df2bf50" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2979502 elementor-widget elementor-widget-text-editor" data-id="2979502" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Nepal Gov. Reg. No: 116524/070/071 |<br> Tourism Reg. No: 1644/070 | <br> TAAN Reg No. 0668 <br>Phone: +977 1 4420444   Cell: +977 9851052042</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-1ffa23f elementor-section-full_width elementor-section-stretched elementor-hidden-desktop elementor-section-height-default elementor-section-height-default" data-id="1ffa23f" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2b3e343" data-id="2b3e343" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2aa3027 elementor-widget elementor-widget-image" data-id="2aa3027" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="159" height="69" alt="" loading="lazy" data-src="./wp-content/uploads/2021/03/Logo.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="159" height="69" alt="" loading="lazy" data-src="./wp-content/uploads/2021/03/Logo.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="159" height="69" src="./wp-content/uploads/2021/03/Logo.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7771850" data-id="7771850" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6297950 elementor-widget elementor-widget-ekit-nav-menu" data-id="6297950" data-element_type="widget" data-widget_type="ekit-nav-menu.default">
+				<div class="elementor-widget-container">
+			<div class="ekit-wid-con ekit_menu_responsive_tablet" data-hamburger-icon="" data-hamburger-icon-type="icon" data-responsive-breakpoint="1024"><div id="ekit-megamenu-main-menu" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default elementskit_line_arrow ekit-nav-menu-one-page-no">
+<ul id="main-menu" class="elementskit-navbar-nav elementskit-menu-po-left">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-121 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Destination<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-124 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">Dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-122 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Trekking<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-126 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-127 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Climbing<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-140 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Tour<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-139 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-129 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Adventure<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-138 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-130 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Rafting<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-137 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-131 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Company<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-132 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Contact Us<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">Droppdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-133 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Offer<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-141 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-134 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px">
+<a href="#" class="ekit-menu-nav-link ekit-menu-dropdown-toggle">Blog<i class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+<ul class="elementskit-dropdown elementskit-submenu-panel">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142 nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" class=" dropdown-item">dropdown</a></li>
+</ul>
+</li>
+</ul>
+				<div class="elementskit-nav-identity-panel">
+					<div class="elementskit-site-title">
+						<a class="elementskit-nav-logo" href="./index.html" target="_self" rel="">
+							<img alt="" data-src="./wp-content/plugins/elementor/assets/images/placeholder.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img alt="" data-src="./wp-content/plugins/elementor/assets/images/placeholder.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="./wp-content/plugins/elementor/assets/images/placeholder.png" alt=""></noscript>
+</noscript>
+						</a>
+					</div>
+					<button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button>
+				</div>
+			</div></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a8cba15 elementor-section-full_width elementor-section-stretched elementor-hidden-desktop elementor-section-height-default elementor-section-height-default" data-id="a8cba15" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-be257d6" data-id="be257d6" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-0256542 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="0256542" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-68bc82c" data-id="68bc82c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ad3de64 elementor-widget elementor-widget-heading" data-id="ad3de64" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Your Adventure <br>Travel Expert in<br> Nepal</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-42cf523" data-id="42cf523" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1eccded elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="1eccded" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Get Started</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5bbbafe elementor-section-full_width elementor-section-stretched elementor-hidden-desktop elementor-section-height-default elementor-section-height-default" data-id="5bbbafe" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ca29e17" data-id="ca29e17" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-b7d1504 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="b7d1504" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-aa24c5a" data-id="aa24c5a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-68fe71a elementor-widget elementor-widget-heading" data-id="68fe71a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">OUR SPECIAL</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-86d2533" data-id="86d2533" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2a13eea elementor-widget elementor-widget-heading" data-id="2a13eea" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Off  the Beaten  Tours</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-54eee69 elementor-widget elementor-widget-text-editor" data-id="54eee69" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Discover the different sides of the city and see what NEST has to offer.</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c301ceb elementor-icon-list--layout-inline elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="c301ceb" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="icon icon-arrow-left-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="icon icon-arrow-right-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-0ef78cd" data-id="0ef78cd" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5ec5d58 elementor-widget elementor-widget-image" data-id="5ec5d58" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Frame-3.png 320w, ./wp-content/uploads/2021/02/Frame-3-236x300.png 236w" data-src="./wp-content/uploads/2021/02/Frame-3.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Frame-3.png 320w, ./wp-content/uploads/2021/02/Frame-3-236x300.png 236w" data-src="./wp-content/uploads/2021/02/Frame-3.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="320" height="406" src="./wp-content/uploads/2021/02/Frame-3.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/Frame-3.png 320w, ./wp-content/uploads/2021/02/Frame-3-236x300.png 236w" sizes="(max-width: 320px) 100vw, 320px"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-be6638a" data-id="be6638a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a008665 elementor-widget elementor-widget-image" data-id="a008665" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-10.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-10-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-10.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-10.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-10-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-10.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="320" height="406" src="./wp-content/uploads/2021/02/NoPath-Copy-10.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/NoPath-Copy-10.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-10-236x300.png 236w" sizes="(max-width: 320px) 100vw, 320px"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-2e713c0" data-id="2e713c0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-93cb5b2 elementor-widget elementor-widget-image" data-id="93cb5b2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-12.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-12-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-12.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-12.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-12-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-12.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="320" height="406" src="./wp-content/uploads/2021/02/NoPath-Copy-12.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/NoPath-Copy-12.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-12-236x300.png 236w" sizes="(max-width: 320px) 100vw, 320px"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4048312 elementor-section-full_width elementor-section-stretched elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default" data-id="4048312" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8d23ecf" data-id="8d23ecf" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-c2e1861 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="c2e1861" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-65513c5" data-id="65513c5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1c32fc7 elementor-widget elementor-widget-spacer" data-id="1c32fc7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-b10960f" data-id="b10960f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0ccf1cd elementor-widget elementor-widget-heading" data-id="0ccf1cd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">OUR SPECIAL</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3e1cc70 elementor-widget elementor-widget-heading" data-id="3e1cc70" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Off  the Beaten  Tours</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9d9e975 elementor-widget elementor-widget-text-editor" data-id="9d9e975" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Discover the different sides of the city and see what NEST has to offer.</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f3034ca elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="f3034ca" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="icon icon-arrow-left-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="icon icon-arrow-right-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-8e765fd" data-id="8e765fd" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-aa391b9 elementor-widget elementor-widget-image" data-id="aa391b9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Frame-3.png 320w, ./wp-content/uploads/2021/02/Frame-3-236x300.png 236w" data-src="./wp-content/uploads/2021/02/Frame-3.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Frame-3.png 320w, ./wp-content/uploads/2021/02/Frame-3-236x300.png 236w" data-src="./wp-content/uploads/2021/02/Frame-3.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="320" height="406" src="./wp-content/uploads/2021/02/Frame-3.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/Frame-3.png 320w, ./wp-content/uploads/2021/02/Frame-3-236x300.png 236w" sizes="(max-width: 320px) 100vw, 320px"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-8519289" data-id="8519289" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-32d7a27 elementor-widget elementor-widget-image" data-id="32d7a27" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-10.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-10-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-10.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-10.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-10-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-10.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="320" height="406" src="./wp-content/uploads/2021/02/NoPath-Copy-10.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/NoPath-Copy-10.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-10-236x300.png 236w" sizes="(max-width: 320px) 100vw, 320px"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-f39ff06" data-id="f39ff06" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-666df91 elementor-widget elementor-widget-image" data-id="666df91" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-12.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-12-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-12.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript>
+<img width="320" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-12.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-12-236x300.png 236w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-12.png" data-sizes="(max-width: 320px) 100vw, 320px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="320" height="406" src="./wp-content/uploads/2021/02/NoPath-Copy-12.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/NoPath-Copy-12.png 320w, ./wp-content/uploads/2021/02/NoPath-Copy-12-236x300.png 236w" sizes="(max-width: 320px) 100vw, 320px"></noscript>
+</noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-d912e0f" data-id="d912e0f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6455020 elementor-widget elementor-widget-image" data-id="6455020" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="103" height="406" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/cropted-bryan-yu-624814-unsplash.png 103w, ./wp-content/uploads/2021/02/cropted-bryan-yu-624814-unsplash-76x300.png 76w" data-src="./wp-content/uploads/2021/02/cropted-bryan-yu-624814-unsplash.png" data-sizes="(max-width: 103px) 100vw, 103px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="103" height="406" src="./wp-content/uploads/2021/02/cropted-bryan-yu-624814-unsplash.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/cropted-bryan-yu-624814-unsplash.png 103w, ./wp-content/uploads/2021/02/cropted-bryan-yu-624814-unsplash-76x300.png 76w" sizes="(max-width: 103px) 100vw, 103px"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3ba37fc elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="3ba37fc" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-92dd84a" data-id="92dd84a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-1b65fb6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1b65fb6" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2d4acd4" data-id="2d4acd4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-8085a03 elementor-widget elementor-widget-image" data-id="8085a03" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="420" height="317" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/03/coen-van-den-broek-1138554-unsplash.png 420w, ./wp-content/uploads/2021/03/coen-van-den-broek-1138554-unsplash-300x226.png 300w" data-src="./wp-content/uploads/2021/03/coen-van-den-broek-1138554-unsplash.png" data-sizes="(max-width: 420px) 100vw, 420px" class="attachment-full size-full lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="420" height="317" src="./wp-content/uploads/2021/03/coen-van-den-broek-1138554-unsplash.png" class="attachment-full size-full" alt="" loading="lazy" srcset="./wp-content/uploads/2021/03/coen-van-den-broek-1138554-unsplash.png 420w, ./wp-content/uploads/2021/03/coen-van-den-broek-1138554-unsplash-300x226.png 300w" sizes="(max-width: 420px) 100vw, 420px"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-41af219 elementor-hidden-phone" data-id="41af219" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f7a0b40 elementor-widget elementor-widget-image" data-id="f7a0b40" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img title="iqx-azmi-1207327-unsplash" alt="iqx-azmi-1207327-unsplash" data-src="./wp-content/uploads/elementor/thumbs/iqx-azmi-1207327-unsplash-p3o3yfvitq4ixls6cyocprfm1075sabgzncozrm4yc.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="./wp-content/uploads/elementor/thumbs/iqx-azmi-1207327-unsplash-p3o3yfvitq4ixls6cyocprfm1075sabgzncozrm4yc.png" title="iqx-azmi-1207327-unsplash" alt="iqx-azmi-1207327-unsplash"></noscript>											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b020f63 elementor-widget elementor-widget-image" data-id="b020f63" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img title="the-digital-marketing-collaboration-267108-unsplash" alt="the-digital-marketing-collaboration-267108-unsplash" data-src="./wp-content/uploads/elementor/thumbs/the-digital-marketing-collaboration-267108-unsplash-p3o3yt1f7ixs0rllz0fmm8od7w6yhavlcw1sm8bkog.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="./wp-content/uploads/elementor/thumbs/the-digital-marketing-collaboration-267108-unsplash-p3o3yt1f7ixs0rllz0fmm8od7w6yhavlcw1sm8bkog.png" title="the-digital-marketing-collaboration-267108-unsplash" alt="the-digital-marketing-collaboration-267108-unsplash"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-3f169a1" data-id="3f169a1" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bbdc415 elementor-widget elementor-widget-spacer" data-id="bbdc415" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e44d67b elementor-widget elementor-widget-heading" data-id="e44d67b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">20 YEARS OF ADVENTURE</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-51f025c elementor-widget elementor-widget-heading" data-id="51f025c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Welcome to NEST Adventure</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-146098b elementor-widget elementor-widget-text-editor" data-id="146098b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">For several travelers, the ultimate goal is to find that oasis that has not been touched by modernization.  Nepal has always been the shangri-la, not only for those who want to experience trekking in its most natural setting, but also glimpse the beautiful culture this country has to offer.  From simple sightseeing tours to see hundred years old temples and walk along the buzzling street of Thamel in Kathmandu, or head to your once in a lifetime adventure and feel the Himalayas on your feet. Trekking in Nepal is a dream for all mountain enthusiasts.  Nepal has always been known to be a haven for backpackers, travelers and tourists, alike!</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a92d798 elementor-widget elementor-widget-button" data-id="a92d798" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Know More About Us</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-734f223" data-id="734f223" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-58611af elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="58611af" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e9bfb03" data-id="e9bfb03" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-79750b9 elementor-widget elementor-widget-heading" data-id="79750b9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">START PLANNING YOUR</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a7e2ba6 elementor-widget elementor-widget-heading" data-id="a7e2ba6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">NEST 's Best Pick</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-88eddea elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="88eddea" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-55b498f" data-id="55b498f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-fcb9a84 elementor-widget elementor-widget-image" data-id="fcb9a84" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="387" height="556" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading.png 387w, ./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading-209x300.png 209w" data-src="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading.png" data-sizes="(max-width: 387px) 100vw, 387px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="387" height="556" src="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading.png 387w, ./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading-209x300.png 209w" sizes="(max-width: 387px) 100vw, 387px"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-570679f" data-id="570679f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1c44cb6 elementor-widget elementor-widget-image" data-id="1c44cb6" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="387" height="556" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading2.png 387w, ./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading2-209x300.png 209w" data-src="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading2.png" data-sizes="(max-width: 387px) 100vw, 387px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="387" height="556" src="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading2.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading2.png 387w, ./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading2-209x300.png 209w" sizes="(max-width: 387px) 100vw, 387px"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-a4ae11d" data-id="a4ae11d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a3f8363 elementor-widget elementor-widget-image" data-id="a3f8363" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="387" height="556" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading1.png 387w, ./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading1-209x300.png 209w" data-src="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading1.png" data-sizes="(max-width: 387px) 100vw, 387px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="387" height="556" src="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading1.png 387w, ./wp-content/uploads/2021/02/Tour-Card-Single-Line-Heading1-209x300.png 209w" sizes="(max-width: 387px) 100vw, 387px"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-5855a94 elementor-widget elementor-widget-spacer" data-id="5855a94" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0b364e1 elementor-align-center elementor-widget elementor-widget-button" data-id="0b364e1" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View All Tours</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c3a001c elementor-widget elementor-widget-spacer" data-id="c3a001c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-42d05bf elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="42d05bf" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6d7f78c" data-id="6d7f78c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-25f5481 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="25f5481" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-192e2ea" data-id="192e2ea" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-550fccd" data-id="550fccd" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0eb22e8 elementor-widget elementor-widget-image" data-id="0eb22e8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="827" height="541" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/NoPath-Copy-45.png 827w, ./wp-content/uploads/2021/02/NoPath-Copy-45-300x196.png 300w, ./wp-content/uploads/2021/02/NoPath-Copy-45-768x502.png 768w" data-src="./wp-content/uploads/2021/02/NoPath-Copy-45.png" data-sizes="(max-width: 827px) 100vw, 827px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="827" height="541" src="./wp-content/uploads/2021/02/NoPath-Copy-45.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/NoPath-Copy-45.png 827w, ./wp-content/uploads/2021/02/NoPath-Copy-45-300x196.png 300w, ./wp-content/uploads/2021/02/NoPath-Copy-45-768x502.png 768w" sizes="(max-width: 827px) 100vw, 827px"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7151b65" data-id="7151b65" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-bc25cd8 elementor-widget elementor-widget-divider" data-id="bc25cd8" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-eeaf664" data-id="eeaf664" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6e85907 elementor-widget elementor-widget-heading" data-id="6e85907" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">FEATURED TRIP OF THE MONTH</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-564221a elementor-widget elementor-widget-heading" data-id="564221a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Langtang <br>Valley Trek – 12<br> Days</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0fc2c46 elementor-widget elementor-widget-text-editor" data-id="0fc2c46" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">A trek to the Langtang valley has to be one of the most rewarding of the short treks available anywhere in Nepal. The east-west running…</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9ebe2f8 elementor-widget elementor-widget-heading" data-id="9ebe2f8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Starting From</p>		</div>
+				</div>
+				<div class="elementor-element elementor-element-45a237a elementor-widget elementor-widget-heading" data-id="45a237a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8847122 elementor-widget elementor-widget-button" data-id="8847122" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">Inquire Now</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a112a59 elementor-section-full_width elementor-section-stretched elementor-hidden-desktop elementor-hidden-tablet elementor-section-height-default elementor-section-height-default" data-id="a112a59" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1f4b60e" data-id="1f4b60e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-75dae23 elementor-widget elementor-widget-heading" data-id="75dae23" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">FIXED DEPARTURE DATE</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9a4dc8a elementor-widget elementor-widget-heading" data-id="9a4dc8a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Our Last Minute Trips</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-dddf7ec elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="dddf7ec" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-ed75a85" data-id="ed75a85" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-798fae0 elementor-widget elementor-widget-heading" data-id="798fae0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Departing</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-dbedf5d" data-id="dbedf5d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5f85ac5 elementor-widget elementor-widget-heading" data-id="5f85ac5" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Trip Name</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-ff41f8a" data-id="ff41f8a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4f083e0 elementor-widget elementor-widget-heading" data-id="4f083e0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Days</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-46c8184" data-id="46c8184" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2fc237d elementor-widget elementor-widget-heading" data-id="2fc237d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Price</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1f11059" data-id="1f11059" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-c11a3d4 elementor-widget elementor-widget-heading" data-id="c11a3d4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Space Left</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-e454305 elementor-widget elementor-widget-divider" data-id="e454305" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-4d2f95f elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="4d2f95f" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-ebf8791" data-id="ebf8791" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-af63c61 elementor-widget elementor-widget-heading" data-id="af63c61" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2018-02-25</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-3b96ccf" data-id="3b96ccf" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2c55177 elementor-widget elementor-widget-heading" data-id="2c55177" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Manaslu</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-df6e2d9" data-id="df6e2d9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cd74fe7 elementor-widget elementor-widget-heading" data-id="cd74fe7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">10</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-83b2f12" data-id="83b2f12" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b73667f elementor-widget elementor-widget-heading" data-id="b73667f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-fcff0b9" data-id="fcff0b9" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5f1c0e2 elementor-widget elementor-widget-heading" data-id="5f1c0e2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-47e080a elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="47e080a" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View Trip</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4616b68 elementor-widget elementor-widget-divider" data-id="4616b68" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-9a0aab6 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9a0aab6" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-32d350c" data-id="32d350c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-396e292 elementor-widget elementor-widget-heading" data-id="396e292" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2018-02-25</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-917c513" data-id="917c513" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-2212431 elementor-widget elementor-widget-heading" data-id="2212431" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Annapurna Base Camp Trek</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-9996665" data-id="9996665" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4b1d9fe elementor-widget elementor-widget-heading" data-id="4b1d9fe" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-634a116" data-id="634a116" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3130923 elementor-widget elementor-widget-heading" data-id="3130923" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-ca6be93" data-id="ca6be93" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-718c171 elementor-widget elementor-widget-heading" data-id="718c171" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-5ce68b6 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="5ce68b6" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View Trip</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-68ef31b elementor-widget elementor-widget-divider" data-id="68ef31b" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-c767bb6 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="c767bb6" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-c20ef00" data-id="c20ef00" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b9c0d37 elementor-widget elementor-widget-heading" data-id="b9c0d37" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2018-02-25</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-caa2596" data-id="caa2596" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-837983e elementor-widget elementor-widget-heading" data-id="837983e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Everest Base Camp Trek</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-7d836a6" data-id="7d836a6" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5722255 elementor-widget elementor-widget-heading" data-id="5722255" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">10</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-432626d" data-id="432626d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-746d26c elementor-widget elementor-widget-heading" data-id="746d26c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1841865" data-id="1841865" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cef4774 elementor-widget elementor-widget-heading" data-id="cef4774" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-042a949 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="042a949" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-xs" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View Trip</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e20f900 elementor-widget elementor-widget-divider" data-id="e20f900" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-4f6ce7a elementor-section-full_width elementor-section-stretched elementor-hidden-tablet elementor-hidden-phone elementor-section-height-default elementor-section-height-default" data-id="4f6ce7a" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f99ee6e" data-id="f99ee6e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6e55d1b elementor-widget elementor-widget-heading" data-id="6e55d1b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">FIXED DEPARTURE DATE</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-19fae31 elementor-widget elementor-widget-heading" data-id="19fae31" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Our Last Minute Trips</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-67649e2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="67649e2" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-bc93838" data-id="bc93838" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a01b0af elementor-widget elementor-widget-heading" data-id="a01b0af" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Departing</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-781edac" data-id="781edac" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-880d88a elementor-widget elementor-widget-heading" data-id="880d88a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Trip Name</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-a45ee2a" data-id="a45ee2a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-32851e3 elementor-widget elementor-widget-heading" data-id="32851e3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Days</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-694543f" data-id="694543f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-783cc04 elementor-widget elementor-widget-heading" data-id="783cc04" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Price</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-e3ff11e" data-id="e3ff11e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-80c50a3 elementor-widget elementor-widget-heading" data-id="80c50a3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Space Left</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-6aa09c1 elementor-widget elementor-widget-divider" data-id="6aa09c1" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-19b693e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="19b693e" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-06d77ce" data-id="06d77ce" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d6f9110 elementor-widget elementor-widget-heading" data-id="d6f9110" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2018-02-25</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-6e2cf35" data-id="6e2cf35" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6f018fa elementor-widget elementor-widget-heading" data-id="6f018fa" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Manaslu Trek</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-0da9b81" data-id="0da9b81" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5ac57c7 elementor-widget elementor-widget-heading" data-id="5ac57c7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">10</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-2f480cf" data-id="2f480cf" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f4de010 elementor-widget elementor-widget-heading" data-id="f4de010" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-6fdd496" data-id="6fdd496" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ec9b32e elementor-widget elementor-widget-heading" data-id="ec9b32e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-6841c5d" data-id="6841c5d" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-db5b96b" data-id="db5b96b" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-f631108 elementor-widget elementor-widget-button" data-id="f631108" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View Trip</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-1df5646 elementor-widget elementor-widget-divider" data-id="1df5646" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-aa4e408 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="aa4e408" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-3d30071" data-id="3d30071" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-fa8ffcd elementor-widget elementor-widget-heading" data-id="fa8ffcd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2018-02-25</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-904ee4a" data-id="904ee4a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-9613f1f elementor-widget elementor-widget-heading" data-id="9613f1f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Annapurna Base Camp Trek</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-badd9f7" data-id="badd9f7" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6c88ac8 elementor-widget elementor-widget-heading" data-id="6c88ac8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-ccf7a23" data-id="ccf7a23" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-aea9ea1 elementor-widget elementor-widget-heading" data-id="aea9ea1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-f6adc12" data-id="f6adc12" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-e381f17 elementor-widget elementor-widget-heading" data-id="e381f17" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-44df76a" data-id="44df76a" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-b9a45a3" data-id="b9a45a3" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-e066183 elementor-widget elementor-widget-button" data-id="e066183" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View Trip</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-596b1e0 elementor-widget elementor-widget-divider" data-id="596b1e0" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-0b06296 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0b06296" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-45e0cc2" data-id="45e0cc2" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-62ddf05 elementor-widget elementor-widget-heading" data-id="62ddf05" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">2018-02-25</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-f40dcda" data-id="f40dcda" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6ff635f elementor-widget elementor-widget-heading" data-id="6ff635f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Everest Base Camp Trek</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-dbbf7e8" data-id="dbbf7e8" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cdaf2ef elementor-widget elementor-widget-heading" data-id="cdaf2ef" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-0dab583" data-id="0dab583" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-eceaf05 elementor-widget elementor-widget-heading" data-id="eceaf05" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">$750</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-c07ade4" data-id="c07ade4" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-99cd9b6 elementor-widget elementor-widget-heading" data-id="99cd9b6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">8</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-7bcdca4" data-id="7bcdca4" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-14 elementor-inner-column elementor-element elementor-element-07c255c" data-id="07c255c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-fb4b9f0 elementor-widget elementor-widget-button" data-id="fb4b9f0" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">View Trip</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-0d1ee3e elementor-widget elementor-widget-divider" data-id="0d1ee3e" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a04b106 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a04b106" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c51ad3b" data-id="c51ad3b" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-dab94fa elementor-widget elementor-widget-spacer" data-id="dab94fa" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0cbf14d elementor-widget elementor-widget-heading" data-id="0cbf14d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Read Our</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5125853 elementor-widget elementor-widget-heading" data-id="5125853" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Latest Article</h2>		</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-652b027 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="652b027" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-954a314" data-id="954a314" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1fc3d5d elementor-widget elementor-widget-image" data-id="1fc3d5d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="386" height="258" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/anton-murygin-303871-unsplash.png 386w, ./wp-content/uploads/2021/02/anton-murygin-303871-unsplash-300x201.png 300w" data-src="./wp-content/uploads/2021/02/anton-murygin-303871-unsplash.png" data-sizes="(max-width: 386px) 100vw, 386px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="386" height="258" src="./wp-content/uploads/2021/02/anton-murygin-303871-unsplash.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/anton-murygin-303871-unsplash.png 386w, ./wp-content/uploads/2021/02/anton-murygin-303871-unsplash-300x201.png 300w" sizes="(max-width: 386px) 100vw, 386px"></noscript>											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-975f1e3 elementor-widget elementor-widget-text-editor" data-id="975f1e3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Kanchenjunga Base Camp Trek 
+<br>Itinerary</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cd9eae8 elementor-widget elementor-widget-text-editor" data-id="cd9eae8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">2018-03-02  &#8211;  BLOG</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-7373ae5" data-id="7373ae5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ba3c540 elementor-widget elementor-widget-spacer" data-id="ba3c540" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-953d98b" data-id="953d98b" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-5a8aa0e elementor-widget elementor-widget-image" data-id="5a8aa0e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="386" height="258" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/ales-krivec-23024-unsplash.png 386w, ./wp-content/uploads/2021/02/ales-krivec-23024-unsplash-300x201.png 300w" data-src="./wp-content/uploads/2021/02/ales-krivec-23024-unsplash.png" data-sizes="(max-width: 386px) 100vw, 386px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="386" height="258" src="./wp-content/uploads/2021/02/ales-krivec-23024-unsplash.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/ales-krivec-23024-unsplash.png 386w, ./wp-content/uploads/2021/02/ales-krivec-23024-unsplash-300x201.png 300w" sizes="(max-width: 386px) 100vw, 386px"></noscript>											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1bc251a elementor-widget elementor-widget-text-editor" data-id="1bc251a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">7 Best Yoga Resorts in Nepal</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6316164 elementor-widget elementor-widget-spacer" data-id="6316164" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cfd5176 elementor-widget elementor-widget-text-editor" data-id="cfd5176" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">2018-03-02 &#8211; BLOG</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-d0dc40f" data-id="d0dc40f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6f1ea2e elementor-widget elementor-widget-spacer" data-id="6f1ea2e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-92bfbc5" data-id="92bfbc5" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-79517f0 elementor-widget elementor-widget-image" data-id="79517f0" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="386" height="258" alt="" loading="lazy" data-srcset="./wp-content/uploads/2021/02/sebastian-pena-lambarri-1222511-unsplash.png 386w, ./wp-content/uploads/2021/02/sebastian-pena-lambarri-1222511-unsplash-300x201.png 300w" data-src="./wp-content/uploads/2021/02/sebastian-pena-lambarri-1222511-unsplash.png" data-sizes="(max-width: 386px) 100vw, 386px" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="386" height="258" src="./wp-content/uploads/2021/02/sebastian-pena-lambarri-1222511-unsplash.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/02/sebastian-pena-lambarri-1222511-unsplash.png 386w, ./wp-content/uploads/2021/02/sebastian-pena-lambarri-1222511-unsplash-300x201.png 300w" sizes="(max-width: 386px) 100vw, 386px"></noscript>											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7b71a92 elementor-widget elementor-widget-text-editor" data-id="7b71a92" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Annapurna Circuit Trek Itinerary</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a0386b4 elementor-widget elementor-widget-spacer" data-id="a0386b4" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5d8d3b0 elementor-widget elementor-widget-text-editor" data-id="5d8d3b0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">2018-03-02  &#8211;  BLOG</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<div class="elementor-element elementor-element-7deacec elementor-widget elementor-widget-spacer" data-id="7deacec" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-dab016f elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="dab016f" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2736821" data-id="2736821" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-7a75950 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="7a75950" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-68e9ba6" data-id="68e9ba6" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-8d811e7 elementor-widget elementor-widget-heading" data-id="8d811e7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Testimonials</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-37faebe elementor-widget elementor-widget-text-editor" data-id="37faebe" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Our Customer<br> Reviews</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d24d4e4 elementor-icon-list--layout-inline elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="d24d4e4" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="icon icon-arrow-left-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="icon icon-arrow-right-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-37b3680" data-id="37b3680" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+					<div class="elementor-background-overlay"></div>
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ad4184e elementor-widget elementor-widget-image" data-id="ad4184e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="106" height="106" alt="" loading="lazy" data-src="./wp-content/uploads/2021/03/pexels-photo-1546711.png" class="attachment-thumbnail size-thumbnail lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="106" height="106" src="./wp-content/uploads/2021/03/pexels-photo-1546711.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-52bf0b9 elementor-widget elementor-widget-heading" data-id="52bf0b9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Chris Adams</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b7d5429 elementor-widget elementor-widget-heading" data-id="b7d5429" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Cape Town Central, South Africa</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-9e7b712" data-id="9e7b712" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+					<div class="elementor-background-overlay"></div>
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-e942088 elementor-widget elementor-widget-heading" data-id="e942088" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Manaslu circuit with group of 5</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c6687e0 elementor-icon-list--layout-inline elementor-align-left elementor-mobile-align-center elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="c6687e0" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-dot-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-dot-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-dot-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-dot-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+								<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-dot-circle"></i>						</span>
+										<span class="elementor-icon-list-text">of 25 Reviews | December, 23, 2018</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-458f418 elementor-widget elementor-widget-text-editor" data-id="458f418" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Thanks to NEST for organizing this wonderful trek and facilitating this amazing experience. NT our guide was excellent. He was always around to help and showed flexibility to ensure we where coping with every challenging day. He always had a joke on hand<br>
+when things&#8230;</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-10d976a elementor-hidden-phone" data-id="10d976a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+					<div class="elementor-background-overlay"></div>
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-32cc7ca elementor-widget elementor-widget-image" data-id="32cc7ca" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="106" height="106" alt="" loading="lazy" data-src="./wp-content/uploads/2021/03/pexels-photo-15467111.png" class="attachment-thumbnail size-thumbnail lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="106" height="106" src="./wp-content/uploads/2021/03/pexels-photo-15467111.png" class="attachment-thumbnail size-thumbnail" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b494f8a elementor-widget elementor-widget-heading" data-id="b494f8a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Chris Adams</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5adebc6 elementor-widget elementor-widget-heading" data-id="5adebc6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Cape Town Central, South Africa</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-46b894e elementor-hidden-phone" data-id="46b894e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+					<div class="elementor-background-overlay"></div>
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-0551b39 elementor-widget elementor-widget-heading" data-id="0551b39" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Ma</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-aded03d elementor-icon-list--layout-inline elementor-align-left elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="aded03d" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items elementor-inline-items">
+							<li class="elementor-icon-list-item elementor-inline-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-dot-circle"></i>						</span>
+										<span class="elementor-icon-list-text"></span>
+									</li>
+						</ul>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d762023 elementor-widget elementor-widget-text-editor" data-id="d762023" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Thanks<br>trek<br>NT<br>around<br>we<br>He<br>
+</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2f5c499 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2f5c499" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a8fcb4f" data-id="a8fcb4f" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-725247d elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="725247d" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4c4fba1" data-id="4c4fba1" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<section class="elementor-section elementor-inner-section elementor-element elementor-element-fee69b8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="fee69b8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6c4479b" data-id="6c4479b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-700901c elementor-widget elementor-widget-heading" data-id="700901c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Everest Region Trek</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9ec66d0 elementor-widget elementor-widget-divider" data-id="9ec66d0" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0b0947c elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0b0947c" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Everest Base Camp Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Everest Three Pass Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Jiri To Everest Base Camp Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Everest Base Camp Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Everest Three Pass Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Jiri To Everest Base Camp Trek</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-07f3452" data-id="07f3452" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d44571b elementor-widget elementor-widget-heading" data-id="d44571b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Annapurna Region Trek</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-04e73da elementor-widget elementor-widget-divider" data-id="04e73da" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-28bc05f elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="28bc05f" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Poon Hill Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Annapurna Circuit Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Annapurna Base Camp Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Mardi Himal Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Nar Phu Valley Trek</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Tilicho lake Trekking</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-de3471e" data-id="de3471e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a76266a elementor-widget elementor-widget-heading" data-id="a76266a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Langtang Region Trek</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-65c8603 elementor-widget elementor-widget-divider" data-id="65c8603" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e3783c4 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="e3783c4" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+					<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Langtang Valley Trekking</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Langtang Gosaikunda Trekking</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Langtang Ganja la Pass Trekking</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Helambu Treks</span>
+									</li>
+								<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">Langtang Valley Trekking</span>
+									</li>
+						</ul>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b2618e6" data-id="b2618e6" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cb8f433 elementor-widget elementor-widget-heading" data-id="cb8f433" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Signup to our Newsletter</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c2cdb77 elementor-widget elementor-widget-divider" data-id="c2cdb77" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-eb67edc elementor-widget elementor-widget-text-editor" data-id="eb67edc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Get news, special offers and fascinating articles.</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-99873f6 elementor-widget elementor-widget-shortcode" data-id="99873f6" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-shortcode">
+<noscript class="ninja-forms-noscript-message">
+    Notice: JavaScript is required for this content.</noscript>
+<div id="nf-form-1-cont" class="nf-form-cont" aria-live="polite" aria-labelledby="nf-form-title-1" aria-describedby="nf-form-errors-1" role="form">
+
+    <div class="nf-loading-spinner"></div>
+
+</div>
+        <!-- TODO: Move to Template File. -->
+        <script>var formDisplay=1;var nfForms=nfForms||[];var form=[];form.id='1';form.settings={"objectType":"Form Setting","editActive":true,"title":"","key":"","created_at":"2021-02-28 11:13:37","default_label_pos":"above","conditions":[],"show_title":0,"clear_complete":"1","hide_complete":"1","wrapper_class":"","element_class":"","add_submit":"1","logged_in":"","not_logged_in_msg":"","sub_limit_number":"","sub_limit_msg":"","calculations":[],"formContentData":["name","email","subscribe_1614510918075"],"container_styles_background-color":"","container_styles_border":"","container_styles_border-style":"","container_styles_border-color":"","container_styles_color":"","container_styles_height":"","container_styles_width":"","container_styles_font-size":"","container_styles_margin":"","container_styles_padding":"","container_styles_display":"","container_styles_float":"","container_styles_show_advanced_css":"0","container_styles_advanced":"","title_styles_background-color":"","title_styles_border":"","title_styles_border-style":"","title_styles_border-color":"","title_styles_color":"","title_styles_height":"","title_styles_width":"","title_styles_font-size":"","title_styles_margin":"","title_styles_padding":"","title_styles_display":"","title_styles_float":"","title_styles_show_advanced_css":"0","title_styles_advanced":"","row_styles_background-color":"","row_styles_border":"","row_styles_border-style":"","row_styles_border-color":"","row_styles_color":"","row_styles_height":"","row_styles_width":"","row_styles_font-size":"","row_styles_margin":"","row_styles_padding":"","row_styles_display":"","row_styles_show_advanced_css":"0","row_styles_advanced":"","row-odd_styles_background-color":"","row-odd_styles_border":"","row-odd_styles_border-style":"","row-odd_styles_border-color":"","row-odd_styles_color":"","row-odd_styles_height":"","row-odd_styles_width":"","row-odd_styles_font-size":"","row-odd_styles_margin":"","row-odd_styles_padding":"","row-odd_styles_display":"","row-odd_styles_show_advanced_css":"0","row-odd_styles_advanced":"","success-msg_styles_background-color":"","success-msg_styles_border":"","success-msg_styles_border-style":"","success-msg_styles_border-color":"","success-msg_styles_color":"","success-msg_styles_height":"","success-msg_styles_width":"","success-msg_styles_font-size":"","success-msg_styles_margin":"","success-msg_styles_padding":"","success-msg_styles_display":"","success-msg_styles_show_advanced_css":"0","success-msg_styles_advanced":"","error_msg_styles_background-color":"","error_msg_styles_border":"","error_msg_styles_border-style":"","error_msg_styles_border-color":"","error_msg_styles_color":"","error_msg_styles_height":"","error_msg_styles_width":"","error_msg_styles_font-size":"","error_msg_styles_margin":"","error_msg_styles_padding":"","error_msg_styles_display":"","error_msg_styles_show_advanced_css":"0","error_msg_styles_advanced":"","allow_public_link":0,"embed_form":"","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","formErrorsCorrectErrors":"Please correct errors before submitting this form.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","currency":"","repeatable_fieldsets":"","unique_field_error":"A form with this value has already been submitted.","drawerDisabled":false,"ninjaForms":"Ninja Forms","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formHoneypot":"If you are a human seeing this field, please leave it empty.","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"&#36;","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"currency_symbol":"","beforeForm":"","beforeFields":"","afterFields":"","afterForm":""};form.fields=[{"objectType":"Field","objectDomain":"fields","editActive":false,"order":1,"idAttribute":"id","label":"","key":"name","type":"textbox","created_at":"2021-02-28 11:13:38","label_pos":"above","required":0,"placeholder":"Full Name","default":"","wrapper_class":"","element_class":"","container_class":"","input_limit":"","input_limit_type":"characters","input_limit_msg":"Character(s) left","manual_key":"","disable_input":"","admin_label":"","help_text":"","desc_text":"","disable_browser_autocomplete":"","mask":"","custom_mask":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3277","custom_name_attribute":"","personally_identifiable":"","value":"","drawerDisabled":false,"id":1,"beforeField":"","afterField":"","parentType":"textbox","element_templates":["textbox","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":2,"idAttribute":"id","label":"","key":"email","type":"email","created_at":"2021-02-28 11:13:38","label_pos":"above","required":0,"placeholder":"Your Email Address","default":"","wrapper_class":"","element_class":"","container_class":"","admin_label":"","help_text":"","desc_text":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","cellcid":"c3281","custom_name_attribute":"email","personally_identifiable":1,"value":"","drawerDisabled":false,"id":2,"beforeField":"","afterField":"","parentType":"email","element_templates":["email","input"],"old_classname":"","wrap_template":"wrap"},{"objectType":"Field","objectDomain":"fields","editActive":false,"order":5,"idAttribute":"id","label":"Subscribe","key":"subscribe_1614510918075","type":"submit","created_at":"2021-02-28 11:13:39","processing_label":"Processing","container_class":"","element_class":"","wrap_styles_background-color":"","wrap_styles_border":"","wrap_styles_border-style":"","wrap_styles_border-color":"","wrap_styles_color":"","wrap_styles_height":"","wrap_styles_width":"","wrap_styles_font-size":"","wrap_styles_margin":"","wrap_styles_padding":"","wrap_styles_display":"","wrap_styles_float":"","wrap_styles_show_advanced_css":0,"wrap_styles_advanced":"","label_styles_background-color":"","label_styles_border":"","label_styles_border-style":"","label_styles_border-color":"","label_styles_color":"","label_styles_height":"","label_styles_width":"","label_styles_font-size":"","label_styles_margin":"","label_styles_padding":"","label_styles_display":"","label_styles_float":"","label_styles_show_advanced_css":0,"label_styles_advanced":"","element_styles_background-color":"","element_styles_border":"","element_styles_border-style":"","element_styles_border-color":"","element_styles_color":"","element_styles_height":"","element_styles_width":"","element_styles_font-size":"","element_styles_margin":"","element_styles_padding":"","element_styles_display":"","element_styles_float":"","element_styles_show_advanced_css":0,"element_styles_advanced":"","submit_element_hover_styles_background-color":"","submit_element_hover_styles_border":"","submit_element_hover_styles_border-style":"","submit_element_hover_styles_border-color":"","submit_element_hover_styles_color":"","submit_element_hover_styles_height":"","submit_element_hover_styles_width":"","submit_element_hover_styles_font-size":"","submit_element_hover_styles_margin":"","submit_element_hover_styles_padding":"","submit_element_hover_styles_display":"","submit_element_hover_styles_float":"","submit_element_hover_styles_show_advanced_css":0,"submit_element_hover_styles_advanced":"","cellcid":"c3287","drawerDisabled":false,"id":4,"beforeField":"","afterField":"","value":"","label_pos":"above","parentType":"textbox","element_templates":["submit","button","input"],"old_classname":"","wrap_template":"wrap-no-label"}];nfForms.push(form);</script>
+        	</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-28db9cb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="28db9cb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-f32f128" data-id="f32f128" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-401b6f3 elementor-widget elementor-widget-divider" data-id="401b6f3" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-931c6d2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="931c6d2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+							<div class="elementor-background-overlay"></div>
+							<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-a17c64e" data-id="a17c64e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3af3d01 elementor-widget elementor-widget-image" data-id="3af3d01" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="80" height="67" alt="" loading="lazy" data-src="./wp-content/uploads/2021/02/NoPath-Copy-36.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="80" height="67" src="./wp-content/uploads/2021/02/NoPath-Copy-36.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-5aedc38" data-id="5aedc38" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-eb72431 elementor-widget elementor-widget-image" data-id="eb72431" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="78" height="80" alt="" loading="lazy" data-src="./wp-content/uploads/2021/02/NoPath-Copy-33.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="78" height="80" src="./wp-content/uploads/2021/02/NoPath-Copy-33.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-8484d26" data-id="8484d26" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-82483fd elementor-widget elementor-widget-image" data-id="82483fd" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="92" height="80" alt="" loading="lazy" data-src="./wp-content/uploads/2021/02/NoPath-Copy-34.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="92" height="80" src="./wp-content/uploads/2021/02/NoPath-Copy-34.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-ce1b879" data-id="ce1b879" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-03b1ca9 elementor-widget elementor-widget-image" data-id="03b1ca9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="58" height="80" alt="" loading="lazy" data-src="./wp-content/uploads/2021/02/NoPath-Copy-35.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="58" height="80" src="./wp-content/uploads/2021/02/NoPath-Copy-35.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-2f4c19c" data-id="2f4c19c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-a896ab0 elementor-widget elementor-widget-image" data-id="a896ab0" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="62" height="80" alt="" loading="lazy" data-src="./wp-content/uploads/2021/02/NoPath-Copy-18.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="62" height="80" src="./wp-content/uploads/2021/02/NoPath-Copy-18.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-16 elementor-inner-column elementor-element elementor-element-e65ebac" data-id="e65ebac" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-94d461b elementor-widget elementor-widget-image" data-id="94d461b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="80" height="56" alt="" loading="lazy" data-src="./wp-content/uploads/2021/02/NoPath-Copy-47.png" class="attachment-large size-large lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img width="80" height="56" src="./wp-content/uploads/2021/02/NoPath-Copy-47.png" class="attachment-large size-large" alt="" loading="lazy"></noscript>											</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-f964b71 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f964b71" data-element_type="section" data-settings="{&quot;ekit_has_onepagescroll_dot&quot;:&quot;yes&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-96eba5f" data-id="96eba5f" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-80e5c1d elementor-widget elementor-widget-heading" data-id="80e5c1d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">© 2019 Nepal Explore Summit Trek Pvt. Ltd. All Rights Reserved.</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-d695758" data-id="d695758" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-cfa05b3 elementor-widget elementor-widget-heading" data-id="cfa05b3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Designed & Developed by:</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-add5316 elementor-widget elementor-widget-heading" data-id="add5316" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">Codewing Solutions</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-80532b6" data-id="80532b6" data-element_type="column">
+			<div class="elementor-column-wrap">
+							<div class="elementor-widget-wrap">
+								</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+						</div>
+					</div>
+		<!-- Enter your scripts here --><link rel="stylesheet" id="dashicons-css" href="./wp-includes/css/dashicons.min.css?ver=5.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="nf-display-css" href="./wp-content/plugins/ninja-forms/assets/css/display-opinions-light.css?ver=5.5.3" type="text/css" media="all">
+<link rel="stylesheet" id="nf-font-awesome-css" href="./wp-content/plugins/ninja-forms/assets/css/font-awesome.min.css?ver=5.5.3" type="text/css" media="all">
+<script type="text/javascript" src="./wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.8.3" id="smush-lazy-load-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=2.0.4" id="elementskit-framework-js-frontend-js"></script>
+<script type="text/javascript" id="elementskit-framework-js-frontend-js-after">
+		var elementskit = {
+            resturl: './wp-json/elementskit/v1/',
+        }
+
+		
+</script>
+<script type="text/javascript" src="./wp-content/plugins/elementskit-lite/widgets/init/assets/js/ekit-core.js?ver=5.5.3" id="ekit-core-js"></script>
+<script type="text/javascript" src="./wp-includes/js/wp-embed.min.js?ver=5.5.3" id="wp-embed-js"></script>
+<script type="text/javascript" src="./wp-includes/js/underscore.min.js?ver=1.8.3" id="underscore-js"></script>
+<script type="text/javascript" src="./wp-includes/js/backbone.min.js?ver=1.4.0" id="backbone-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/ninja-forms/assets/js/min/front-end-deps.js?ver=3.5.1" id="nf-front-end-deps-js"></script>
+<script type="text/javascript" id="nf-front-end-js-extra">
+/* <![CDATA[ */
+var nfi18n = {"ninjaForms":"Ninja Forms","changeEmailErrorMsg":"Please enter a valid email address!","changeDateErrorMsg":"Please enter a valid date!","confirmFieldErrorMsg":"These fields must match!","fieldNumberNumMinError":"Number Min Error","fieldNumberNumMaxError":"Number Max Error","fieldNumberIncrementBy":"Please increment by ","fieldTextareaRTEInsertLink":"Insert Link","fieldTextareaRTEInsertMedia":"Insert Media","fieldTextareaRTESelectAFile":"Select a file","formErrorsCorrectErrors":"Please correct errors before submitting this form.","formHoneypot":"If you are a human seeing this field, please leave it empty.","validateRequiredField":"This is a required field.","honeypotHoneypotError":"Honeypot Error","fileUploadOldCodeFileUploadInProgress":"File Upload in Progress.","fileUploadOldCodeFileUpload":"FILE UPLOAD","currencySymbol":"$","fieldsMarkedRequired":"Fields marked with an <span class=\"ninja-forms-req-symbol\">*<\/span> are required","thousands_sep":",","decimal_point":".","siteLocale":"en_US","dateFormat":"m\/d\/Y","startOfWeek":"1","of":"of","previousMonth":"Previous Month","nextMonth":"Next Month","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"weekdaysMin":["Su","Mo","Tu","We","Th","Fr","Sa"]};
+var nfFrontEnd = {"adminAjax":".\/wp-admin\/admin-ajax.php","ajaxNonce":"76844bcb50","requireBaseUrl":".\/wp-content\/plugins\/ninja-forms\/assets\/js\/","use_merge_tags":{"user":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"post":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"system":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"fields":{"address":"address","textbox":"textbox","button":"button","checkbox":"checkbox","city":"city","confirm":"confirm","date":"date","email":"email","firstname":"firstname","html":"html","hidden":"hidden","lastname":"lastname","listcheckbox":"listcheckbox","listcountry":"listcountry","listimage":"listimage","listmultiselect":"listmultiselect","listradio":"listradio","listselect":"listselect","liststate":"liststate","note":"note","number":"number","password":"password","passwordconfirm":"passwordconfirm","product":"product","quantity":"quantity","recaptcha":"recaptcha","repeater":"repeater","shipping":"shipping","spam":"spam","starrating":"starrating","submit":"submit","terms":"terms","textarea":"textarea","total":"total","unknown":"unknown","zip":"zip","hr":"hr"},"calculations":{"html":"html","hidden":"hidden","note":"note","unknown":"unknown"}},"opinionated_styles":"light"};
+var nfRepeater = {"add_repeater_child_field_text":"Add "};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./wp-content/plugins/ninja-forms/assets/js/min/front-end.js?ver=3.5.1" id="nf-front-end-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.0.7" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" src="./wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" id="jquery-ui-position-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.7" id="share-link-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.7","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":".\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":7,"title":"Test%20design%20%E2%80%93%20the%20best%20design","excerpt":"","featuredImage":false}};
+</script>
+<script type="text/javascript" src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.7" id="elementor-frontend-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=2.0.4" id="elementskit-elementor-js"></script>
+<script type="text/javascript" src="./wp-content/plugins/elementskit-lite/modules/controls/assets/js/widgetarea-editor.js?ver=2.0.4" id="elementskit-js-widgetarea-control-editor-js"></script>
+<script id="tmpl-nf-layout" type="text/template">
+	<span id="nf-form-title-{{{ data.id }}}" class="nf-form-title">
+		{{{ ( 1 == data.settings.show_title ) ? '<h3>' + data.settings.title + '<\/h3>' : '' }}}
+	<\/span>
+	<div class="nf-form-wrap ninja-forms-form-wrap">
+		<div class="nf-response-msg"><\/div>
+		<div class="nf-debug-msg"><\/div>
+		<div class="nf-before-form"><\/div>
+		<div class="nf-form-layout"><\/div>
+		<div class="nf-after-form"><\/div>
+	<\/div>
+</script>
+
+<script id="tmpl-nf-empty" type="text/template">
+
+</script>
+<script id="tmpl-nf-before-form" type="text/template">
+	{{{ data.beforeForm }}}
+</script><script id="tmpl-nf-after-form" type="text/template">
+	{{{ data.afterForm }}}
+</script><script id="tmpl-nf-before-fields" type="text/template">
+    <div class="nf-form-fields-required">{{{ data.renderFieldsMarkedRequired() }}}<\/div>
+    {{{ data.beforeFields }}}
+</script><script id="tmpl-nf-after-fields" type="text/template">
+    {{{ data.afterFields }}}
+    <div id="nf-form-errors-{{{ data.id }}}" class="nf-form-errors" role="alert"><\/div>
+    <div class="nf-form-hp"><\/div>
+</script>
+<script id="tmpl-nf-before-field" type="text/template">
+    {{{ data.beforeField }}}
+</script><script id="tmpl-nf-after-field" type="text/template">
+    {{{ data.afterField }}}
+</script><script id="tmpl-nf-form-layout" type="text/template">
+	<form>
+		<div>
+			<div class="nf-before-form-content"><\/div>
+			<div class="nf-form-content {{{ data.element_class }}}"><\/div>
+			<div class="nf-after-form-content"><\/div>
+		<\/div>
+	<\/form>
+</script><script id="tmpl-nf-form-hp" type="text/template">
+	<label for="nf-field-hp-{{{ data.id }}}" aria-hidden="true">
+		{{{ nfi18n.formHoneypot }}}
+		<input id="nf-field-hp-{{{ data.id }}}" name="nf-field-hp" class="nf-element nf-field-hp" type="text" value=""/>
+	<\/label>
+</script>
+<script id="tmpl-nf-field-layout" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-container" class="nf-field-container {{{ data.type }}}-container {{{ data.renderContainerClass() }}}">
+        <div class="nf-before-field"><\/div>
+        <div class="nf-field"><\/div>
+        <div class="nf-after-field"><\/div>
+    <\/div>
+</script>
+<script id="tmpl-nf-field-before" type="text/template">
+    {{{ data.beforeField }}}
+</script><script id="tmpl-nf-field-after" type="text/template">
+    <#
+    /*
+     * Render our input limit section if that setting exists.
+     */
+    #>
+    <div class="nf-input-limit"><\/div>
+    <#
+    /*
+     * Render our error section if we have an error.
+     */
+    #>
+    <div id="nf-error-{{{ data.id }}}" class="nf-error-wrap nf-error" role="alert"><\/div>
+    <#
+    /*
+     * Render any custom HTML after our field.
+     */
+    #>
+    {{{ data.afterField }}}
+</script>
+<script id="tmpl-nf-field-wrap" type="text/template">
+	<div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+		<#
+		/*
+		 * This is our main field template. It's called for every field type.
+		 * Note that must have ONE top-level, wrapping element. i.e. a div/span/etc that wraps all of the template.
+		 */
+        #>
+		<#
+		/*
+		 * Render our label.
+		 */
+        #>
+		{{{ data.renderLabel() }}}
+		<#
+		/*
+		 * Render our field element. Uses the template for the field being rendered.
+		 */
+        #>
+		<div class="nf-field-element">{{{ data.renderElement() }}}<\/div>
+		<#
+		/*
+		 * Render our Description Text.
+		 */
+        #>
+		{{{ data.renderDescText() }}}
+	<\/div>
+</script>
+<script id="tmpl-nf-field-wrap-no-label" type="text/template">
+    <div id="nf-field-{{{ data.id }}}-wrap" class="{{{ data.renderWrapClass() }}}" data-field-id="{{{ data.id }}}">
+        <div class="nf-field-label"><\/div>
+        <div class="nf-field-element">{{{ data.renderElement() }}}<\/div>
+        <div class="nf-error-wrap"><\/div>
+    <\/div>
+</script>
+<script id="tmpl-nf-field-wrap-no-container" type="text/template">
+
+        {{{ data.renderElement() }}}
+
+        <div class="nf-error-wrap"><\/div>
+</script>
+<script id="tmpl-nf-field-label" type="text/template">
+	<div class="nf-field-label"><label for="nf-field-{{{ data.id }}}"
+	                                   id="nf-label-field-{{{ data.id }}}"
+	                                   class="{{{ data.renderLabelClasses() }}}">{{{ data.label }}} {{{ ( 'undefined' != typeof data.required && 1 == data.required ) ? '<span class="ninja-forms-req-symbol">*<\/span>' : '' }}} {{{ data.maybeRenderHelp() }}}<\/label><\/div>
+</script>
+<script id="tmpl-nf-field-error" type="text/template">
+	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}<\/div>
+</script><script id="tmpl-nf-form-error" type="text/template">
+	<div class="nf-error-msg nf-error-{{{ data.id }}}">{{{ data.msg }}}<\/div>
+</script><script id="tmpl-nf-field-input-limit" type="text/template">
+    {{{ data.currentCount() }}} {{{ nfi18n.of }}} {{{ data.input_limit }}} {{{ data.input_limit_msg }}}
+</script><script id="tmpl-nf-field-null" type="text/template">
+</script><script id="tmpl-nf-field-textbox" type="text/template">
+	<input
+			type="text"
+			value="{{{ data.value }}}"
+			class="{{{ data.renderClasses() }}} nf-element"
+			{{{ data.renderPlaceholder() }}}
+			{{{ data.maybeDisabled() }}}
+			{{{ data.maybeInputLimit() }}}
+
+			id="nf-field-{{{ data.id }}}"
+			<# if( ! data.disable_browser_autocomplete && -1 < [ 'city', 'zip' ].indexOf( data.type ) ){ #>
+				name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
+				autocomplete="on"
+			<# } else { #>
+				name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}"
+				{{{ data.maybeDisableAutocomplete() }}}
+			<# } #>
+
+			aria-invalid="false"
+			aria-describedby="nf-error-{{{ data.id }}}"
+			aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+			{{{ data.maybeRequired() }}}
+	>
+</script>
+<script id="tmpl-nf-field-input" type="text/template">
+    <input id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" aria-invalid="false" aria-describedby="nf-error-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element" type="text" value="{{{ data.value }}}" {{{ data.renderPlaceholder() }}} {{{ data.maybeDisabled() }}}
+           aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+            {{{ data.maybeRequired() }}}
+    >
+</script>
+<script id="tmpl-nf-field-email" type="text/template">
+	<input
+			type="email"
+			value="{{{ data.value }}}"
+			class="{{{ data.renderClasses() }}} nf-element"
+
+			id="nf-field-{{{ data.id }}}"
+			<# if( ! data.disable_browser_autocompletes ){ #>
+			name="{{ data.custom_name_attribute || 'nf-field-' + data.id + '-' + data.type }}"
+			autocomplete="email"
+			<# } else { #>
+			name="{{ data.custom_name_attribute || 'nf-field-' + data.id }}"
+			{{{ data.maybeDisableAutocomplete() }}}
+			<# } #>
+			{{{ data.renderPlaceholder() }}}
+			{{{ data.maybeDisabled() }}}
+
+			aria-invalid="false"
+			aria-describedby="nf-error-{{{ data.id }}}"
+			aria-labelledby="nf-label-field-{{{ data.id }}}"
+
+			{{{ data.maybeRequired() }}}
+	>
+</script>
+<script id="tmpl-nf-field-submit" type="text/template">
+	<input id="nf-field-{{{ data.id }}}" class="{{{ data.renderClasses() }}} nf-element " type="button" value="{{{ data.label }}}" {{{ ( data.disabled ) ? 'disabled' : '' }}}>
+</script><script id="tmpl-nf-field-button" type="text/template">
+    <button id="nf-field-{{{ data.id }}}" name="nf-field-{{{ data.id }}}" class="{{{ data.classes }}} nf-element">
+        {{{ data.label }}}
+    <\/button>
+</script>	</body>
+</html>
